@@ -60,6 +60,7 @@ let
         go
         jq
         cacert
+        git
       ];
       outputHashMode = "recursive";
       outputHashAlgo = null;
