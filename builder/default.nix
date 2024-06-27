@@ -5,6 +5,7 @@
 , lib
 , fetchgit
 , jq
+, git
 , cacert
 , pkgsBuildBuild
 , buildPackages
