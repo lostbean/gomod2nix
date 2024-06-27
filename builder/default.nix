@@ -51,6 +51,7 @@ let
     , goPackagePath
     , version
     , go
+    , git
     }:
     stdenvNoCC.mkDerivation {
       name = "${baseNameOf goPackagePath}_${version}";
@@ -96,7 +97,7 @@ let
         (goPackagePath: meta: fetchGoModule {
           goPackagePath = meta.replaced or goPackagePath;
           inherit (meta) version hash;
-          inherit go;
+          inherit go git;
         })
         modulesStruct.mod;
     in
